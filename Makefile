@@ -1,7 +1,7 @@
 all:
-	g++ -Wall example.cpp -o ex
+	g++ -Wall dayOfWeek.cpp -o dow
 
 run:
-	./ex
+	./dow
 
 try: all run
