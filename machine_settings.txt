@@ -1,0 +1,10 @@
+(a) How many runs of the machine are necessary?  
+Answer: 2
+
+(b) What are the settings of the machine on each run? 
+Answer: First set the machine at "2cm^3", then "2cm^3" again. You can also accomplish a two-run
+        balance by first setting the machine at "5cm^3" followed by "1cm^3".
+
+(c) What are the sizes of the ocus pieces before / after each run? 
+Answer: Scenario 1: First they are 1,1,5... then they become 3,3,5 ... and end at 5,5,5.
+	Scenario 2: First they are 1,1,5... then they become 6,6,5 ... and end at 6,6,6 (If two pieces are allowed to be treated as maxima at the same time).
