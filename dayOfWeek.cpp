@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <limits.h>
 using namespace std; 
 
     
@@ -16,8 +17,7 @@ int main() {
     "The word \" Failure\" may not be in your dictionary... but the word \"MORON\" is written all over it!", "Woah woah you're not as smart as you look", 
     "I clearly overestimated you, I am so sorry"};
     
-    const short SHRT_MIN = -20;
-    const short SHRT_MAX = 20;
+
     
     cout << "What day of the week would you like? ";
     cin >> inputDay;
