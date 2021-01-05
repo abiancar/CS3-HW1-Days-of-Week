@@ -16,33 +16,32 @@ int main() {
     "Why are you all the things that you choose to be?", 
     "The word \" Failure\" may not be in your dictionary... but the word \"MORON\" is written all over it!", "Woah woah you're not as smart as you look", 
     "I clearly overestimated you, I am so sorry"};
-    
 
-    
     cout << "What day of the week would you like? ";
     cin >> inputDay;
     cout << "Number: " << inputDay << endl; 
     
 
-
-    
+    //if program is used correctly, print weekday
     if (inputDay >= 0 && inputDay <= 6){
-        cout << "You are so within range my brother" << endl;
         cout << "Day " << inputDay << " Corresponds to " << days.at(inputDay) << endl;
         return 0; 
     
-    }else if((inputDay > 6 && inputDay >SHRT_MAX)||(inputDay < 0 && inputDay > SHRT_MIN)){
-        //pseudoRandom number
+
+    //if user has no clue what they are doing, print insult and guidance
+    }else if((inputDay > 6 && inputDay >SHRT_MAX)||(inputDay < 0 && inputDay < SHRT_MIN)){
+        //pseudoRandom number used to select one of 10 insults
         int rand = inputDay % 10;
         cout << inputDay << "?!!1!?! " << insults.at(rand) << endl;
         cout << "The only valid inputs are 0 - 6." << endl; 
         return 1;
 
 
+    //if small error detected, let user know
     }else{
         cout << "Invalid Value" << endl;
         return 2; 
     }
-
+    
     return 0;
 }

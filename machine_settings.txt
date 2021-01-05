@@ -1,3 +1,4 @@
+Question #2:
 (a) How many runs of the machine are necessary?  
 Answer: 2
 
@@ -8,3 +9,28 @@ Answer: First set the machine at "2cm^3", then "2cm^3" again. You can also accom
 (c) What are the sizes of the ocus pieces before / after each run? 
 Answer: Scenario 1: First they are 1,1,5... then they become 3,3,5 ... and end at 5,5,5.
 	Scenario 2: First they are 1,1,5... then they become 6,6,5 ... and end at 6,6,6 (If two pieces are allowed to be treated as maxima at the same time).
+
+
+
+BONUS QUESTIONS:
+Q1: You may have noticed that you can input a letter (instead of a number)
+which causes some odd results. Can you explain what is happening?
+
+ANSWER: It seems that regardless of the letter, the number received becomes 0. I speculate that the computer is
+        is returning 0 upon receiving a letter to indicate that the integer received is not an number. If this is 
+        the case, it likely does this so that the program does not crash. 
+
+Q2: Suppose the duczoll had a different set of ocus pieces they needed to
+balance in size. Would your solution still be correct? Is there a generic way to compute how to
+configure and run the machine?
+
+ANSWER: If this were the case, my answer would not be correct anymore. For instance, if the ocus pieces were 
+        respectively 4,4, and 5 ... a simple solution would be to run the machine once on setting "1".
+        
+        There is a way to automate the process of finding the optimal configuration of the machine: 
+        1) Start with original ocus pieces and potential machine settings (presumably 1,2,5)
+        2) Find the maximum of the vector of ocus pieces
+        3) Test changes to the vector at all available settings
+        4) Check if any potential solutions create a balanced vector
+        5) If any are found, return the optimal amount of runs, and information regarding the history of the winning machine activity. Stop tests because this is an optimal solution (could be one of many)!
+        6) If not, store all failed tests into a new vector, and test them again
